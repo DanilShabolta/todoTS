@@ -7,12 +7,12 @@ interface TaskFormProps {
 }
 
 const TaskForm: React.FC<TaskFormProps> = ({ addTask }) => {
-  const [taskTitle, setTaskTitle] = useState<string>(""); // Укажите тип состояния
-  const [taskText, setTaskText] = useState<string>(""); // Укажите тип состояния
+  const [taskTitle, setTaskTitle] = useState<string>("");
+  const [taskText, setTaskText] = useState<string>("");
 
   const handleAddTask = () => {
     if (taskTitle.trim() && taskText.trim()) {
-      const newTask = new Task(taskTitle, taskText, 0); // Создаем новый объект Task
+      const newTask = new Task(taskTitle, taskText, 0);
       addTask(newTask);
       setTaskTitle("");
       setTaskText("");

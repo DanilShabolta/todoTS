@@ -15,7 +15,7 @@ const ConfirmDelete: React.FC<ConfirmDeleteProps> = ({
 }) => {
   const handleDelete = () => {
     if (task) {
-      removeTask(task); // Убедитесь, что передаете task
+      removeTask(task);
       closeModal();
     }
   };
